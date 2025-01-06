@@ -1,0 +1,22 @@
+﻿Meta Programming
+	اهداف
+		1. کاهش تکرار کد
+		2. انعطاف پذیری
+		3. خودکار سازی فرایند توسعه
+	دسته بندی
+		1. Reflection
+		2. Attribute
+		3. CodeDOM
+			lib.Harmony
+			Foldy
+		4. Source Generator
+			---		
+			
+			
+Reflection:
+	Type
+		->Method
+		->Properties
+		->Field
+		-Call Method Dynamic
+		-New Instance
