@@ -80,6 +80,25 @@ public partial class Form1 : Form
     {
         //DynamicFormUtils.DesignForm(panelUser, typeof(User));
         panelUser.DesignForm(typeof(User));
-        groupBoxProduct.DesignForm(typeof (Product));
+        groupBoxProduct.DesignForm(typeof(Product));
+    }
+
+    private void buttonSetUser_Click(object sender, EventArgs e)
+    {
+        panelUser.SetFormData(new User
+        {
+            Email = "email@gmail.com",
+            Family = "Seyedmorad",
+            Name = "Masoumeh",
+            IsActive = true,
+            ID = 1
+        });
+    }
+
+    private void buttonGetProductData_Click(object sender, EventArgs e)
+    {
+        var data = groupBoxProduct.GetFormData(typeof(Product));
+        MessageBox.Show(ToJSON(data));
+        //groupBoxProduct.GetFormData(new Product { });
     }
 }
