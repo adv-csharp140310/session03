@@ -1,4 +1,5 @@
 using session03.Model;
+using session03.Utils;
 using System.Reflection;
 
 namespace session03;
@@ -63,12 +64,22 @@ public partial class Form1 : Form
 
     private void buttonToJSON_Click(object sender, EventArgs e)
     {
-        var user  = new User { ID  = 1, 
-            Name = "Ali", 
-            Family = "Ramezani", 
-            Email= "nadarim@gmail.com", 
-            IsActive = true };
+        var user = new User
+        {
+            ID = 1,
+            Name = "Ali",
+            Family = "Ramezani",
+            Email = "nadarim@gmail.com",
+            IsActive = true
+        };
 
         MessageBox.Show(ToJSON(user));
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+        //DynamicFormUtils.DesignForm(panelUser, typeof(User));
+        panelUser.DesignForm(typeof(User));
+        groupBoxProduct.DesignForm(typeof (Product));
     }
 }

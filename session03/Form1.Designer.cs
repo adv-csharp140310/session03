@@ -31,6 +31,8 @@
             buttonReflection = new Button();
             buttonPrivate = new Button();
             buttonToJSON = new Button();
+            panelUser = new Panel();
+            groupBoxProduct = new GroupBox();
             SuspendLayout();
             // 
             // buttonReflection
@@ -63,16 +65,35 @@
             buttonToJSON.UseVisualStyleBackColor = true;
             buttonToJSON.Click += buttonToJSON_Click;
             // 
+            // panelUser
+            // 
+            panelUser.Location = new Point(240, 12);
+            panelUser.Name = "panelUser";
+            panelUser.Size = new Size(325, 426);
+            panelUser.TabIndex = 3;
+            // 
+            // groupBoxProduct
+            // 
+            groupBoxProduct.Location = new Point(571, 12);
+            groupBoxProduct.Name = "groupBoxProduct";
+            groupBoxProduct.Size = new Size(456, 426);
+            groupBoxProduct.TabIndex = 4;
+            groupBoxProduct.TabStop = false;
+            groupBoxProduct.Text = "Product";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1066, 450);
+            Controls.Add(groupBoxProduct);
+            Controls.Add(panelUser);
             Controls.Add(buttonToJSON);
             Controls.Add(buttonPrivate);
             Controls.Add(buttonReflection);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -81,5 +102,7 @@
         private Button buttonReflection;
         private Button buttonPrivate;
         private Button buttonToJSON;
+        private Panel panelUser;
+        private GroupBox groupBoxProduct;
     }
 }
