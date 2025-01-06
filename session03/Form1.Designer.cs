@@ -35,6 +35,7 @@
             groupBoxProduct = new GroupBox();
             buttonSetUser = new Button();
             buttonGetProductData = new Button();
+            buttonSaveUser = new Button();
             SuspendLayout();
             // 
             // buttonReflection
@@ -103,11 +104,22 @@
             buttonGetProductData.UseVisualStyleBackColor = true;
             buttonGetProductData.Click += buttonGetProductData_Click;
             // 
+            // buttonSaveUser
+            // 
+            buttonSaveUser.Location = new Point(321, 455);
+            buttonSaveUser.Name = "buttonSaveUser";
+            buttonSaveUser.Size = new Size(86, 23);
+            buttonSaveUser.TabIndex = 7;
+            buttonSaveUser.Text = "Save User";
+            buttonSaveUser.UseVisualStyleBackColor = true;
+            buttonSaveUser.Click += buttonSaveUser_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1066, 562);
+            Controls.Add(buttonSaveUser);
             Controls.Add(buttonGetProductData);
             Controls.Add(buttonSetUser);
             Controls.Add(groupBoxProduct);
@@ -130,5 +142,6 @@
         private GroupBox groupBoxProduct;
         private Button buttonSetUser;
         private Button buttonGetProductData;
+        private Button buttonSaveUser;
     }
 }

@@ -1,4 +1,5 @@
-using session03.Model;
+﻿using session03.Model;
+using session03.Service;
 using session03.Utils;
 using System.Reflection;
 
@@ -100,5 +101,16 @@ public partial class Form1 : Form
         var data = groupBoxProduct.GetFormData(typeof(Product));
         MessageBox.Show(ToJSON(data));
         //groupBoxProduct.GetFormData(new Product { });
+    }
+
+    private void buttonSaveUser_Click(object sender, EventArgs e)
+    {
+        //Unbox
+        var data = (User)panelUser.GetFormData(typeof(User));
+
+        var userService = new UserService();
+        userService.Create(data);
+
+        MessageBox.Show("Success 🎉");
     }
 }

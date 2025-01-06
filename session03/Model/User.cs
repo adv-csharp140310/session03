@@ -2,7 +2,7 @@
 
 namespace session03.Model;
 
-class User
+public class User
 {
     public int ID { get; set; }
     [Display(Name = "نام")]
